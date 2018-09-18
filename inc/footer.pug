@@ -1,0 +1,59 @@
+-var f_catalog_menu =['Услуги','Как записаться ','Преимущества','Учащимся','Отзывы','Новости','Контакты'];
+-var f_catalog_menu2 =['Категория А','Категория B','Категория C','Категория E', 'Прокат мотоциклов', 'Допвождение', 'VIP - обучение'];
+
+footer
+    .container
+        .row
+            .col-12.col-sm-12.col-md-12.col-xl-4.left_col
+                .logo_block
+                    a.logo_link(href="")
+                        img(src="img/logo.png")
+                        .site_desc
+                            span ДОСААФ
+                            span Московского района
+                            span АВТОШКОЛА
+                p.copyright Московская РОС ДОСААФ г. Минска <br>© 2014-2018
+            .col-12.col-sm-12.col-md-12.col-xl-5.center_col
+                .row
+                    .col-12.col-sm-12.col-md-6.col-xl-6
+                        .f_title
+                            a(href="#") ГЛАВНАЯ
+                        ul.f_nav
+                            for menu_item,index in f_catalog_menu
+                                if index == 0
+                                    li.active
+                                        a(href="" + menu_item + '.html')=menu_item
+                                else
+                                    li
+                                        a(href="" + menu_item + '.html')=menu_item
+
+
+                    .col-12.col-sm-12.col-md-6.col-xl-6
+                        .f_title
+                            a(href="#") УСЛУГИ
+                        ul.f_nav
+                            for menu_item2,index in f_catalog_menu2
+                                li
+                                    a(href="" + menu_item2 + '.html')=menu_item2
+            .col-12.col-sm-12.col-md-12.col-xl-3.right_col
+                .f_contacts
+                    small Адрес:
+                    p
+                        strong г.Минска, ул.Семашко <br>д.15, каб.29
+                    small Телефоны:
+                    p <strong>+375 17 207 49 88<br>+375 44 772 01 40</strong>
+                    small Почта:
+                    p
+                        strong uch-dosaaf@mail.ru
+                .partners
+                    small Наши информационные партнеры:
+                    div
+                        img(src="img/p_1.png")
+                        img(src="img/p_2.png")
+                        img(src="img/p_3.png")
+
+
+
+
+a.scrolltop(href="#body")
+

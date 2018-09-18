@@ -1,0 +1,77 @@
+-var main_menu =['Главная','Услуги', 'Цены','Акции','О компании', 'Отзывы','Вопрос-ответ', 'Статьи','Контакты'];
+
+
+
+header
+    .container
+        .row
+            .col-4.col-sm-4.col-md-2.col-xl-2
+                .logo
+                    a.logo__link(href="#")
+                        img(src="img/logo.svg")
+            .col-8.col-sm-8.col-md-10.col-xl-10
+                .header__contacts_row
+                    .header__col.mr-md-3
+                        .header__location
+                            button.header__btn.location_btn(type="button" id="location" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            .header_dropdown.dropdown-menu(aria-labelledby="location")
+                                p <strong>г. Минск,<br> ул. Богдановича, 118</strong><br> (ТД "Некрасовский")
+
+                    .header__col
+                        .header__time
+                            button.header__btn.time_btn(type="button" id="time" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            .header_dropdown.dropdown-menu(aria-labelledby="time")
+                                span <b>пн-пт:</b> 9.00-20.00
+                                span <b>сб:</b> 9.00-15.00
+                                span <b>вс:</b> выходной
+
+                    .header__col.mr-md-3
+                        .header__phone
+                            button.header__btn.phone_btn(type="button" id="phone" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            .header_dropdown.dropdown-menu(aria-labelledby="phone")
+                                ul
+                                    li
+                                        a(href="tel:+375 (29) 683 27 31") <strong>+375 (29) 683 27 31</strong>
+                                    li
+                                        a(href="tel:+375 (33) 327 27 31") <strong>+375 (33) 327 27 31</strong> (Viber)
+
+                    .header__col
+                        .header__tel
+                            button.header__btn.tel_btn(type="button" id="tel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            .header_dropdown.dropdown-menu(aria-labelledby="tel")
+                                ul
+                                    li
+                                        a(href="tel:+375 (17) 258 39 39") <strong>+375 (17) 258 39 39</strong>
+
+                    .header__col.d-none.d-xl-block
+                        button.btn__default.order_call(data-toggle="modal" data-target="#") Заказать звонок
+
+                .row
+                    .col-12
+                        .mobile_btn
+                            span Меню
+                            button.hamburger
+                                span
+                                span
+                                span
+
+
+
+                .main_menu
+                    button.btn__default.order_call(data-toggle="modal" data-target="#") Заказать звонок
+                    ul.nav
+                        for menu_item,index in main_menu
+                            if index == 0
+                                li.active
+                                    a(href="" + menu_item + '.html')=menu_item
+                            else
+                                li
+                                    a(href="" + menu_item + '.html')=menu_item
+
+
+
+
+
+
+
+
