@@ -1,5 +1,23 @@
 main
-    section.main_slider
+    //section.main_slider_section
+        .main_slider
+            -for(var i=1;i<=3;i++)
+                .item(style="background-image:url(img/9349.png)")
+        .container
+    -var services =['','Терапевтическая стоматология', 'Детская стоматология', 'Эстетическая стоматология', 'Офисное отбеливание зубов','Установка зубного украшения', 'Протезирование зубов', 'Неврология', 'Мануальная терапия'];
+    section.services
+        .container
+            p.section_title.text-center Наши услуги
+            .row.services_list
+                -for(var i=1;i<=8;i++)
+                    .col-12.col-sm-6.col-md-4.col-xl-3
+                        article.type_service
+                            a(href="#")
+                                .row
+                                    .col-4.col-sm-12.col-md-12.col-xl-12.icon
+                                        img(src="img/icon-"+i+".svg")
+                                    div.text.col-8.col-sm-12.col-md-12.col-xl-12=services[i]
+
 
 
 

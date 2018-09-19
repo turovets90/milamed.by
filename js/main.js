@@ -9,6 +9,17 @@ $(document).ready(function(){
 
 
 
+    if($('.main_slider > div').length > 2){
+        $('.main_slider').slick({
+            dots: true,
+            fade:true,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+    }
+
+
 /*
     $('.mobile_btn').click(function () {
         $('.main_menu').toggleClass('open');

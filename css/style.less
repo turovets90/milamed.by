@@ -733,3 +733,119 @@ header{
 
   }
 }
+
+
+.test{
+
+  position: absolute;
+  width: 2526.91px;
+  height: 2508.5px;
+  left: 302px;
+  top: -1511.66px;
+  background: #308589;
+  border-radius: 300px;
+  transform: matrix(0.96, -0.28, 0.28, 0.96, 0, 0);
+
+}
+
+
+.main_slider_section{
+  position: relative;
+
+  .main_slider{
+    max-width: 1378px;
+    .item{
+      width: 100%;
+      height: 650px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+    }
+  }
+
+}
+
+.section_title{
+    text-align: center;
+  color: @green_default;
+  font: 36px @Montserrat-Black;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 55px;
+  @media (max-width:767px){
+    font-size: 30px;margin-bottom: 35px;
+  }
+  @media (max-width:575px){
+    font-size: 25px;
+    padding-bottom: 23px;margin-bottom: 25px;
+  }
+
+
+
+  &.text-center{
+    text-align: center;
+    &:before{
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  &:before{
+    .b_a();
+    background: rgba(10, 166, 27, 0.3);
+    left: 0;
+    bottom: 0;
+    width: 82px;
+    height: 3px;
+  }
+}
+
+.services_list{
+
+}
+
+.type_service{
+  background: #FFFFFF;
+  .box-shadow(0px 2px 10px rgba(0, 0, 0, 0.15));
+  .border-radius(5px);
+  position: relative;
+  text-align: center;
+  padding: 20px 15px 0;
+  min-height: 250px;
+  margin-bottom: 37px;
+  .transition(@transition_default);
+  @media (max-width:575px){
+    min-height: auto;
+    text-align: left;
+    padding: 20px 15px; margin-bottom: 17px;
+  }
+  &:hover{
+    .box-shadow(0 2px 15px rgba(0, 0, 0, 0.25));
+  }
+  a{
+    display: inline-block;
+    text-decoration: none;
+    &:hover, &:focus{
+      text-decoration: none;
+    }
+  }
+
+  .icon{
+    margin-bottom: 15px;
+    @media (max-width:575px){
+      margin-bottom: 0;
+    }
+  }
+  .text{
+    color: #308589;
+    font: 18px @Montserrat-bold;
+
+    @media (max-width:575px){
+      .flex();
+      .ai-center();
+      text-align: left; font: 16px @Montserrat-bold;
+      padding-left: 0;
+    }
+  }
+}
