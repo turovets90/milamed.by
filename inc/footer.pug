@@ -1,56 +1,78 @@
--var f_catalog_menu =['Услуги','Как записаться ','Преимущества','Учащимся','Отзывы','Новости','Контакты'];
--var f_catalog_menu2 =['Категория А','Категория B','Категория C','Категория E', 'Прокат мотоциклов', 'Допвождение', 'VIP - обучение'];
+-var main_menu =['Главная','Услуги', 'Цены','Акции','О компании', 'Отзывы','Вопрос-ответ', 'Статьи','Контакты'];
 
 footer
     .container
         .row
-            .col-12.col-sm-12.col-md-12.col-xl-4.left_col
-                .logo_block
-                    a.logo_link(href="")
-                        img(src="img/logo.png")
-                        .site_desc
-                            span ДОСААФ
-                            span Московского района
-                            span АВТОШКОЛА
-                p.copyright Московская РОС ДОСААФ г. Минска <br>© 2014-2018
-            .col-12.col-sm-12.col-md-12.col-xl-5.center_col
-                .row
-                    .col-12.col-sm-12.col-md-6.col-xl-6
-                        .f_title
-                            a(href="#") ГЛАВНАЯ
-                        ul.f_nav
-                            for menu_item,index in f_catalog_menu
-                                if index == 0
-                                    li.active
-                                        a(href="" + menu_item + '.html')=menu_item
-                                else
-                                    li
-                                        a(href="" + menu_item + '.html')=menu_item
-
-
-                    .col-12.col-sm-12.col-md-6.col-xl-6
-                        .f_title
-                            a(href="#") УСЛУГИ
-                        ul.f_nav
-                            for menu_item2,index in f_catalog_menu2
+            .col-4.col-sm-4.col-md-2.col-xl-2.d-none.d-xl-block
+                .logo
+                    a.logo__link(href="#")
+                        img(src="img/logo.svg")
+            .col-12.col-sm-12.col-md-12.col-xl-10
+                .main_menu
+                    ul.nav
+                        for menu_item,index in main_menu
+                            if index == 0
+                                li.active
+                                    a(href="" + menu_item + '.html')=menu_item
+                            else
                                 li
-                                    a(href="" + menu_item2 + '.html')=menu_item2
-            .col-12.col-sm-12.col-md-12.col-xl-3.right_col
-                .f_contacts
-                    small Адрес:
-                    p
-                        strong г.Минска, ул.Семашко <br>д.15, каб.29
-                    small Телефоны:
-                    p <strong>+375 17 207 49 88<br>+375 44 772 01 40</strong>
-                    small Почта:
-                    p
-                        strong uch-dosaaf@mail.ru
-                .partners
-                    small Наши информационные партнеры:
-                    div
-                        img(src="img/p_1.png")
-                        img(src="img/p_2.png")
-                        img(src="img/p_3.png")
+                                    a(href="" + menu_item + '.html')=menu_item
+                .header__contacts_row
+                    .header__col.mr-md-3.order_2
+                        .header__location
+                            button.header__btn.location_btn(type="button" id="location" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            .header_dropdown.dropdown-menu(aria-labelledby="location")
+                                p <strong>г. Минск,<br> ул. Богдановича, 118</strong><br> (ТД "Некрасовский")
+
+                    .header__col.order_3
+                        .header__time
+                            button.header__btn.time_btn(type="button" id="time" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            .header_dropdown.dropdown-menu(aria-labelledby="time")
+                                span <b>пн-пт:</b> 9.00-20.00
+                                span <b>сб:</b> 9.00-15.00
+                                span <b>вс:</b> выходной
+
+                    .header__col.mr-md-3.order_4
+                        .header__phone
+                            button.header__btn.phone_btn(type="button" id="phone" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            .header_dropdown.dropdown-menu(aria-labelledby="phone")
+                                ul
+                                    li
+                                        a(href="tel:+375 (29) 683 27 31") <strong>+375 (29) 683 27 31</strong>
+                                    li
+                                        a(href="tel:+375 (33) 327 27 31") <strong>+375 (33) 327 27 31</strong> (Viber)
+
+                    .header__col.order_5
+                        .header__tel
+                            button.header__btn.tel_btn(type="button" id="tel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            .header_dropdown.dropdown-menu(aria-labelledby="tel")
+                                ul
+                                    li
+                                        a(href="tel:+375 (17) 258 39 39") <strong>+375 (17) 258 39 39</strong>
+
+                    .header__col.order_1
+                        button.btn__default.order_call(data-toggle="modal" data-target="#") Заказать звонок
+
+
+
+section.copyright
+    .container
+        .row
+            .col-12.col-sm-12.col-md-6.col-xl-6
+                p Copyright © Milamed
+                <div itemtype="//data-vocabulary.org/Review-aggregate" itemscope="" id="site_rating">
+                <input type="hidden" value="0" name="is_auth">
+                <span itemprop="itemreviewed" class="reit">Наш рейтинг: 4.8</span>  <span class="reit">(Голосов: <span itemprop="votes" style="margin-left:0px">25</span> из 30) <span class="stars">★★★★	</span></span><p></p>
+                <p><span itemtype="//data-vocabulary.org/Rating" itemscope="" itemprop="rating">
+                <meta content="4.8" itemprop="value">
+                <meta content="5" itemprop="best">
+                </span>
+                </p>
+                </div>
+            .col-12.col-sm-12.col-md-6.col-xl-6
+                p.seologic
+                    a(href="#") Продвижение и разработка сайта - Seologic
+
 
 
 

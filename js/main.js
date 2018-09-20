@@ -20,6 +20,64 @@ $(document).ready(function(){
     }
 
 
+
+    if($('.specialists_slider > div').length > 3){
+        $('.specialists_slider').slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }else if($(window).innerWidth() > 575 && $('.specialists_slider > div').length > 1){
+        $('.specialists_slider').slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+    }
+
+
+
+
+    $('.type_review').each(function(){
+        var show_more=$(this).find('.show_more');
+        var more=$(this).find('.more');
+        $(show_more).on('click', function(){
+           if($(more).is(':visible')){
+               $(more).slideUp();
+               $(show_more).text('Читать далее');
+           }else {
+               $(more).slideDown();
+               $(show_more).text('Свернуть');
+           }
+        });
+    });
+
+
+    if($(window).innerWidth() < 575){
+        $('.reviews_list').slick({
+            dots: true,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+    }
+
 /*
     $('.mobile_btn').click(function () {
         $('.main_menu').toggleClass('open');

@@ -19,6 +19,100 @@ main
                                     div.text.col-8.col-sm-12.col-md-12.col-xl-12=services[i]
 
 
+    section.about
+        .container-fluid
+            .row
+                .col-12.col-sm-12.col-md-6.col-xl-6.pl-0.d-none.d-md-flex.align-items-center
+                    div.about_img
+                        img(src="img/about_img.png")
+                .col-12.col-sm-12.col-md-6.col-xl-6
+                    p.section_title.text-center.text-md-left О нас
+                    .about_desc Медицинский центр "МИЛАмед" предлагает услуги платной стоматологии в Минске. При лечении у нас Вы можете быть уверены, что услуги и квалификация врачей соответствует международным стандартам, а санитарный режим позволяет на 100% обеспечить полную стерильность при лечении и безопасность. С нами Вы забудете, что такое страх перед стоматологией, и будете помнить только про красивую улыбку!
+                    a.btn__default(href="#") Подробнее о компании
+
+    -var pr=['','Преимущества','Оборудование', 'Атмосфера', 'Отличные цены'];
+    -var pr_desc=['','Наша команда состоит только из высококвалифицированных врачей.','Наша клиника укомплектована только самым современным оборудованием.', 'Каждый день мы создаем комфортную атмосферу для каждого клиента.', 'Ценовая политика, которая понравится каждому клиенту. Скидки и акции круглый год.'];
+    section.preimuschestva
+        .container
+            p.section_title.text-center Преимущества
+            .row.preimuschestva_row
+                -for(var p=1;p<=4;p++)
+                    .col-12.col-sm-6.col-md-6.col-xl-3
+                        article.type_preimuschestva
+                            .row
+                                .col-3.col-sm-12.pr-0
+                                    .icon
+                                        img(src="img/p_" + p + ".svg")
+                                .col-9.col-sm-12
+                                    .p_title=pr[p]
+                                    .desc=pr_desc[p]
+
+    section.specialists
+        .container
+            p.section_title.text-center Специалисты
+            .row.specialists_row.specialists_slider
+                -for(var s=1;s<=8;s++)
+                    .col-12.col-sm-6.col-md-6.col-xl-3.item
+                        article.type_specialists
+                            a(href="#")
+                                .thumbnail(style="background-image:url(img/s_img.png)")
+                                .s_body
+                                    .s_name Борисенко Александр Васильевич
+                                    .s_position Мануальный терапевт первой квалификационной категории, невролог первой квалификационной категории
+                                    .s_desc Кандидат медицинских наук, доцент. Стаж работы 28 лет.
+
+            .text-center
+                a.btn__default(href="#") Все специалисты
+
+    section.reviews(style="background-image:url(img/r_img.jpg)")
+        .container
+            p.section_title.text-center Отзывы
+            .row.reviews_list
+                -for(var r=1;r<=4;r++)
+                    .col-12.col-sm-12.col-md-6.col-xl-3
+                        article.type_review
+                            .r_head Ольга
+                            .r_body Первый раз обратилась в эту клинику к стоматологу и осталась ну очень довольна.Лечащий врач Анастасия Леонидовна мастер своего дела, делает все четко, качественно и без боли.Очень комфортная атмосфера в клинике. Лечащий врач Анаста...
+                                .more Первый раз обратилась в эту клинику к стоматологу и осталась ну очень довольна.Лечащий врач Анастасия Леонидовна мастер своего дела, делает все четко, качественно и без боли.Очень комфортная атмосфера в клинике. Лечащий врач Анаста
+                                button.show_more Читать далее
+
+            .btn_group
+                a.btn__default(href="#") Все отзывы
+                a.btn__default.orange(href="#") Оставить отзыв
+
+    section.sertificates
+        .container
+            p.section_title.text-center Лицензии и сертификаты
+            .row.sertificates_list
+                -for(var s=1;s<=4;s++)
+                    .col-12.col-sm-6.col-md-3.col-xl-3.text-center
+                        .item
+                            a(href="img/ss_img.jpg" data-fancybox="sertificates")
+                                img(src="img/ss_img.jpg")
+
+    section.articles
+        .container
+            p.section_title.text-center Статьи
+            .row
+                -for(var a=1;a<=4;a++)
+                    .col-12.col-sm-12.col-md-6.col-xl-3
+                        article.type_article
+                            a.thumbnail(href="#" style="background-image:url(img/s_img.png)")
+                            .a_body
+                                .date 23.08.2017
+                                .title Отбеливающая паста: миф или действенное средство против пожелтения?
+                                a.more(href="#") Подробнее
+
+            .text-center
+                a.btn__default(href="#") Все статьи
+
+
+
+
+
+
+
+
 
 
 
