@@ -1,9 +1,34 @@
 main
-    //section.main_slider_section
-        .main_slider
-            -for(var i=1;i<=3;i++)
-                .item(style="background-image:url(img/9349.png)")
+    section.main_slider_section
+        .main_slider_row.position-absolute
+            .main_slider_col1
+            .main_slider_col2
+                .main_slider_container
+                    .main_slider
+                        -for(var i=1;i<=3;i++)
+                            .item(style="background-image:url(img/fdhgfdhdfgf.jpg)")
+                    .text-center.btn__default_block
+                        button.btn__default.orange(data-toggle="modal" data-target="#modal_default") Получить консультацию
+
         .container
+            .main_slider_desc
+                p.title Вместе с нами Вам все по зубам
+                p.subtitle получить консультацию
+                form.main_form
+                    .row
+                        .col-12.field
+                            span.name
+                                input.form-control(type="text" placeholder="Ваше имя")
+                        .col-12.field
+                            span.phone
+                                input.form-control(type="text" placeholder="+375 __ ___ __ __")
+                        .col-12.field
+                            span.message
+                                textarea.form-control(type="text" placeholder="Ваше сообщение")
+                        .col-12.field
+                            button.btn__default.orange(type="submit") Отправить
+
+
     -var services =['','Терапевтическая стоматология', 'Детская стоматология', 'Эстетическая стоматология', 'Офисное отбеливание зубов','Установка зубного украшения', 'Протезирование зубов', 'Неврология', 'Мануальная терапия'];
     section.services
         .container

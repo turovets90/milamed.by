@@ -78,6 +78,17 @@ $(document).ready(function(){
         });
     }
 
+
+    var header_height = $('header').height();
+    $('header').next().css({'margin-top': header_height+'px'});
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > header_height) {
+            $('header').addClass('fixed');
+        } else {
+            $('header').removeClass('fixed');
+        }
+    });
+
 /*
     $('.mobile_btn').click(function () {
         $('.main_menu').toggleClass('open');

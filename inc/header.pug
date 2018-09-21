@@ -44,7 +44,7 @@ header
                                         a(href="tel:+375 (17) 258 39 39") <strong>+375 (17) 258 39 39</strong>
 
                     .header__col.d-none.d-xl-block
-                        button.btn__default.order_call(data-toggle="modal" data-target="#") Заказать звонок
+                        button.btn__default.order_call(data-toggle="modal" data-target="#modal_default") Заказать звонок
 
                 .row
                     .col-12
@@ -58,7 +58,7 @@ header
 
 
                 .main_menu
-                    button.btn__default.order_call(data-toggle="modal" data-target="#") Заказать звонок
+                    button.btn__default.order_call(data-toggle="modal" data-target="#modal_default") Заказать звонок
                     ul.nav
                         for menu_item,index in main_menu
                             if index == 0

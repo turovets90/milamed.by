@@ -55,7 +55,7 @@
                 </div>
               </div>
               <div class="header__col d-none d-xl-block">
-                <button class="btn__default order_call" data-toggle="modal" data-target="#">Заказать звонок</button>
+                <button class="btn__default order_call" data-toggle="modal" data-target="#modal_default">Заказать звонок</button>
               </div>
             </div>
             <div class="row">
@@ -66,7 +66,7 @@
               </div>
             </div>
             <div class="main_menu">
-              <button class="btn__default order_call" data-toggle="modal" data-target="#">Заказать звонок</button>
+              <button class="btn__default order_call" data-toggle="modal" data-target="#modal_default">Заказать звонок</button>
               <ul class="nav">
                 <li class="active"><a href="Главная.html">Главная</a></li>
                 <li><a href="Услуги.html">Услуги</a></li>
@@ -84,12 +84,42 @@
       </div>
     </header>
     <main>
-      <!--section.main_slider_section
-      .main_slider
-          -for(var i=1;i<=3;i++)
-              .item(style="background-image:url(img/9349.png)")
-      .container
-      -->
+      <section class="main_slider_section">
+        <div class="main_slider_row position-absolute">
+          <div class="main_slider_col1"></div>
+          <div class="main_slider_col2">
+            <div class="main_slider_container">
+              <div class="main_slider">
+                <div class="item" style="background-image:url(img/fdhgfdhdfgf.jpg)"></div>
+                <div class="item" style="background-image:url(img/fdhgfdhdfgf.jpg)"></div>
+                <div class="item" style="background-image:url(img/fdhgfdhdfgf.jpg)"></div>
+              </div>
+              <div class="text-center btn__default_block">
+                <button class="btn__default orange" data-toggle="modal" data-target="#modal_default">Получить консультацию</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="main_slider_desc">
+            <p class="title">Вместе с нами Вам все по зубам</p>
+            <p class="subtitle">получить консультацию</p>
+            <form class="main_form">
+              <div class="row">
+                <div class="col-12 field"><span class="name">
+                    <input class="form-control" type="text" placeholder="Ваше имя"/></span></div>
+                <div class="col-12 field"><span class="phone">
+                    <input class="form-control" type="text" placeholder="+375 __ ___ __ __"/></span></div>
+                <div class="col-12 field"><span class="message">
+                    <textarea class="form-control" type="text" placeholder="Ваше сообщение"></textarea></span></div>
+                <div class="col-12 field">
+                  <button class="btn__default orange" type="submit">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
       <section class="services">
         <div class="container">
           <p class="section_title text-center">Наши услуги</p>
@@ -492,7 +522,32 @@
           </div>
         </div>
       </div>
-    </section><a class="scrolltop" href="#body"></a>
+    </section>
+    <div class="modal fade" id="modal_default" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close" data-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-body">
+            <p class="title">Заполните форму для получения консультации
+              <form class="main_form">
+                <div class="row">
+                  <div class="col-12 field"><span class="name">
+                      <input class="form-control" type="text" placeholder="Ваше имя"/></span></div>
+                  <div class="col-12 field"><span class="phone">
+                      <input class="form-control" type="text" placeholder="+375 __ ___ __ __"/></span></div>
+                  <div class="col-12 field"><span class="message">
+                      <textarea class="form-control" type="text" placeholder="Ваше сообщение"></textarea></span></div>
+                  <div class="col-12 field">
+                    <button class="btn__default orange" type="submit">Отправить</button>
+                  </div>
+                </div>
+              </form>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--a.scrolltop(href="#body")-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>

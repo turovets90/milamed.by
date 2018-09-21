@@ -75,7 +75,25 @@ section.copyright
 
 
 
+.modal.fade#modal_default(role="dialog" aria-labelledby="modalLabel" aria-hidden="true")
+    .modal-dialog
+        .modal-content
+            button.close(data-dismiss="modal" aria-label="Close")
+            .modal-body
+                p.title Заполните форму для получения консультации
+                    form.main_form
+                        .row
+                            .col-12.field
+                                span.name
+                                    input.form-control(type="text" placeholder="Ваше имя")
+                            .col-12.field
+                                span.phone
+                                    input.form-control(type="text" placeholder="+375 __ ___ __ __")
+                            .col-12.field
+                                span.message
+                                    textarea.form-control(type="text" placeholder="Ваше сообщение")
+                            .col-12.field
+                                button.btn__default.orange(type="submit") Отправить
 
-
-a.scrolltop(href="#body")
+//a.scrolltop(href="#body")
 
