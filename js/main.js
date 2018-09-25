@@ -89,6 +89,35 @@ $(document).ready(function(){
         }
     });
 
+
+
+    if($('.serv_slider > div').length > 2){
+        $('.serv_slider').slick({
+            dots: true,
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }else if($(window).innerWidth() < 575 && $('.serv_slider > div').length > 1){
+        $('.serv_slider').slick({
+            dots: true,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+    }
+
+
+
+
 /*
     $('.mobile_btn').click(function () {
         $('.main_menu').toggleClass('open');

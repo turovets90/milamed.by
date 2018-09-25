@@ -72,10 +72,10 @@ main
                                     .p_title=pr[p]
                                     .desc=pr_desc[p]
 
-    section.specialists
+    section.specialists.bg_grey
         .container
             p.section_title.text-center Специалисты
-            .row.specialists_row.specialists_slider
+            .row.specialists_row.slick_slider.specialists_slider
                 -for(var s=1;s<=8;s++)
                     .col-12.col-sm-6.col-md-6.col-xl-3.item
                         article.type_specialists
@@ -105,7 +105,7 @@ main
                 a.btn__default(href="#") Все отзывы
                 a.btn__default.orange(href="#") Оставить отзыв
 
-    section.sertificates
+    section.sertificates.bg_grey
         .container
             p.section_title.text-center Лицензии и сертификаты
             .row.sertificates_list
