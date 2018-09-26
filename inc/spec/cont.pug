@@ -1,0 +1,25 @@
+main.page
+    section.title_crumb_section.pb-3
+        .container
+            ul.breadcrumb
+                li.breadcrumb-item
+                    a(href="#") Главная
+                li.breadcrumb-item
+                    a(href="#content") #{page.title}
+            h1 #{page.title}
+
+    section.specialists.bg_grey
+        .container
+            .row.specialists_row
+                -for(var s=1;s<=8;s++)
+                    .col-12.col-sm-6.col-md-6.col-xl-3.item.mb-3
+                        article.type_specialists
+                            a(href="#")
+                                .thumbnail(style="background-image:url(img/s_img.png)")
+                                .s_body
+                                    .s_name Борисенко Александр Васильевич
+                                    .s_position Мануальный терапевт первой квалификационной категории, невролог первой квалификационной категории
+                                    .s_desc Кандидат медицинских наук, доцент. Стаж работы 28 лет.
+
+            .text-center
+                a.btn__default(href="#") Загрузить еще

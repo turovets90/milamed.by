@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html
+    head
+        - var page = { title: 'Контакты' }
+        include inc/head.pug
+    body#body
+        include inc/header.pug
+        main.page
+            section.title_crumb_section.pb-3
+                .container
+                    ul.breadcrumb
+                        li.breadcrumb-item
+                            a(href="#") Главная
+                        li.breadcrumb-item
+                            a(href="#content") #{page.title}
+                    h1 #{page.title}
+            section
+                .container
+
+
+        include inc/footer.pug
+        include inc/scripts.pug

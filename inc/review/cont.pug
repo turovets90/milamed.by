@@ -1,0 +1,23 @@
+main.page
+    section.title_crumb_section.pb-3
+        .container
+            ul.breadcrumb
+                li.breadcrumb-item
+                    a(href="#") Главная
+                li.breadcrumb-item
+                    a(href="#content") #{page.title}
+            h1 #{page.title}
+
+    section.reviews(style="background-image:url(img/r_img.jpg)")
+        .container
+            .row.reviews_list
+                -for(var r=1;r<=12;r++)
+                    .col-12.col-sm-12.col-md-6.col-xl-3.mb-4
+                        article.type_review
+                            .r_head Ольга
+                            .r_body Первый раз обратилась в эту клинику к стоматологу и осталась ну очень довольна.Лечащий врач Анастасия Леонидовна мастер своего дела, делает все четко, качественно и без боли.Очень комфортная атмосфера в клинике. Лечащий врач Анаста...
+                                .more Первый раз обратилась в эту клинику к стоматологу и осталась ну очень довольна.Лечащий врач Анастасия Леонидовна мастер своего дела, делает все четко, качественно и без боли.Очень комфортная атмосфера в клинике. Лечащий врач Анаста
+                                button.show_more Читать далее
+
+            .btn_group
+                a.btn__default.orange(href="#") Оставить отзыв

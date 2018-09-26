@@ -1196,9 +1196,10 @@ main{
 
 
 .type_review{
-  .border-radius(4px);
+  .border-radius(5px);
   background: #fff;
   padding: 20px 20px 35px;
+  .box-shadow(1px 1px 4px rgba(0, 0, 0, 0.12));
 
   .r_head{
     position: relative;
@@ -1322,6 +1323,7 @@ main{
         background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzEiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMSAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMwLjg3MDggMzEuOTkzOUwyMS44MjU5IDIyLjMzNTRDMjQuMTg1NCAxOS45MjA4IDI1LjU2MTkgMTYuNzAxMiAyNS41NjE5IDEzLjA3OTNDMjUuNTYxOSA1LjgzNTM3IDE5Ljg1OTYgMCAxMi43ODA5IDBDNS43MDIyNiAwIDAgNS44MzUzNyAwIDEzLjA3OTNDMCAyMC4zMjMyIDUuNzAyMjYgMjYuMTU4NSAxMi43ODA5IDI2LjE1ODVDMTUuOTI3IDI2LjE1ODUgMTguNjc5OCAyNC45NTEyIDIwLjg0MjcgMjMuMTQwM0wyOS44ODc3IDMyLjc5ODhDMzAuMDg0MyAzMyAzMC4wODQzIDMzIDMwLjI4MSAzM0MzMC40Nzc2IDMzIDMwLjY3NDIgMzMgMzAuNjc0MiAzMi43OTg4QzMxLjA2NzUgMzIuNTk3NSAzMS4wNjc1IDMyLjE5NTEgMzAuODcwOCAzMS45OTM5Wk0xLjE3OTc2IDEzLjA3OTNDMS4xNzk3NiA2LjY0MDI1IDYuMjkyMTUgMS4yMDczMyAxMi43ODA5IDEuMjA3MzNDMTkuMDczMSAxLjIwNzMzIDI0LjM4MjEgNi40MzkwMyAyNC4zODIxIDEzLjA3OTNDMjQuMzgyMSAxOS41MTgzIDE5LjI2OTcgMjQuOTUxMiAxMi43ODA5IDI0Ljk1MTJDNi4yOTIxNSAyNC45NTEyIDEuMTc5NzYgMTkuNzE5NSAxLjE3OTc2IDEzLjA3OTNaIiBmaWxsPSIjMEFBNjFCIi8+CjxwYXRoIGQ9Ik0xNy4xMDY4IDEyLjQ3NTdIMTMuMzcwOFY4LjY1MjQ2QzEzLjM3MDggOC4yNTAwMiAxMy4xNzQyIDguMDQ4ODMgMTIuNzgwOSA4LjA0ODgzQzEyLjM4NzcgOC4wNDg4MyAxMi4xOTEgOC4yNTAwMiAxMi4xOTEgOC42NTI0NlYxMi40NzU3SDguNDU1MDRDOC4wNjE3OCAxMi40NzU3IDcuODY1MTcgMTIuNjc2OSA3Ljg2NTE3IDEzLjA3OTNDNy44NjUxNyAxMy40ODE4IDguMDYxNzggMTMuNjgzIDguNDU1MDQgMTMuNjgzSDEyLjE5MVYxNy41MDYyQzEyLjE5MSAxNy45MDg2IDEyLjM4NzcgMTguMTA5OCAxMi43ODA5IDE4LjEwOThDMTMuMTc0MiAxOC4xMDk4IDEzLjM3MDggMTcuOTA4NiAxMy4zNzA4IDE3LjUwNjJWMTMuNjgzSDE3LjEwNjhDMTcuNSAxMy42ODMgMTcuNjk2NyAxMy40ODE4IDE3LjY5NjcgMTMuMDc5M0MxNy42OTY3IDEyLjY3NjkgMTcuMzAzNCAxMi40NzU3IDE3LjEwNjggMTIuNDc1N1oiIGZpbGw9IiMwQUE2MUIiLz4KPC9zdmc+Cg==');
         top: 15px;
         right: 0;
+        z-index: 9;
       }
     }
   }
@@ -2473,11 +2475,11 @@ main.page{
   }
 }
 
-
-.services_page{
+.title_crumb_section + section{
   padding-top: 80px;
   padding-bottom: 50px;
 }
+
 
 
 .modal-dialog {
@@ -2485,4 +2487,35 @@ main.page{
     max-width: 700px;
   }
 
+}
+
+
+
+#map{
+height: 470px;
+}
+
+
+#accordion{
+  .card{
+    margin-bottom: 10px;
+    .box-shadow(0 2px 10px rgba(0,0,0,0.15));
+   //border:1px solid @green_default;
+    .card-header{
+      cursor: pointer;
+      background: none;
+      .card_title{
+        .transition(@transition_default);
+        font-family: @Montserrat-bold;
+        &[aria-expanded="true"]{
+          color: @green_default;
+        }
+      }
+      &:hover{
+        .card_title{
+          color: @green_default;
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,21 @@
+main.page
+    section.title_crumb_section.pb-3
+        .container
+            ul.breadcrumb
+                li.breadcrumb-item
+                    a(href="#") Главная
+                li.breadcrumb-item
+                    a(href="#content") #{page.title}
+            h1 #{page.title}
+    section.sertificates.bg_grey
+        .container
+            .row.sertificates_list
+                -for(var s=1;s<=20;s++)
+                    .col-12.col-sm-6.col-md-3.col-xl-3.text-center.mb-4
+                        .item
+                            if page.title == 'Фотогалерея'
+                                a(href="img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg" data-fancybox="gallery")
+                                    img(src="img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg")
+                            else
+                                a(href="img/ss_img.jpg" data-fancybox="sertificates")
+                                    img(src="img/ss_img.jpg")

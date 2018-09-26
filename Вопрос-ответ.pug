@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html
+    head
+        - var page = { title: 'Вопрос-ответ' }
+        include inc/head.pug
+    body#body
+        include inc/header.pug
+        main.page
+            section.title_crumb_section.pb-3
+                .container
+                    ul.breadcrumb
+                        li.breadcrumb-item
+                            a(href="#") Главная
+                        li.breadcrumb-item
+                            a(href="#content") #{page.title}
+                    h1 #{page.title}
+            section
+                .container
+                    #accordion
+                        -for(var a=1;a<=12;a++)
+                            .card
+                                .card-header(id="card-"+a+"")
+                                    div.card_title(data-toggle="collapse" data-target="#collapse-"+a+"" aria-expanded="false" aria-controls="collapse-"+a+"") In sodales vulputate imperdiet. Duis vitae orci eget massa rhoncus feugiat?
+                                div.collapse(id="collapse-"+a+"" aria-labelledby="card-"+a+"" data-parent="#accordion")
+                                    .card-body
+                                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper nulla dui, in pellentesque ex dignissim vel. Pellentesque maximus in justo et consequat. Ut id est ut nunc porttitor consectetur gravida vitae sapien. Donec nec mi felis. Nulla condimentum malesuada vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porttitor urna a tortor elementum, vel fermentum mi mattis. Sed porta magna nec lacus rhoncus gravida. Integer non vestibulum lectus. Vestibulum non quam sit amet diam sollicitudin sodales ac a ipsum.
+
+                                        p Ut dui diam, blandit non enim bibendum, tincidunt viverra mauris. Nulla ac dolor sit amet elit bibendum posuere. Nam porttitor arcu lacinia lacus rhoncus, vel vulputate ipsum varius. Mauris et maximus ante. Nunc tristique lectus at justo rhoncus, non dignissim est scelerisque. Sed non neque ac metus consequat lobortis. Donec et ante sed purus rutrum bibendum. Cras ultricies nisl elit, vitae fermentum leo cursus in. Vestibulum eros ante, accumsan a leo id, congue aliquam metus. In rutrum, tortor vitae molestie tempor, lorem eros dapibus arcu, at volutpat lacus risus id odio. Quisque vitae turpis varius dolor venenatis varius dignissim at dui. Quisque imperdiet nisl in consectetur vestibulum.
+
+                                        p In sodales vulputate imperdiet. Duis vitae orci eget massa rhoncus feugiat. Maecenas vel ante metus. Suspendisse quis elementum ante. Phasellus eget risus sit amet ipsum gravida sagittis. Mauris condimentum at justo non blandit. Suspendisse a velit tristique, euismod felis vel, gravida odio. Suspendisse potenti.
+
+        include inc/footer.pug
+        include inc/scripts.pug
