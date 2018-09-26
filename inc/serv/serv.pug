@@ -1,4 +1,4 @@
-main
+main.page
     section.title_crumb_section
         .container
             ul.breadcrumb
@@ -9,7 +9,8 @@ main
                 li.breadcrumb-item
                     a(href="#content") #{page.title}
             h1 #{page.title}
-    .container.page_img(style="background-image:url(img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg)")
+    .container
+        .page_img(style="background-image:url(img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg)")
 
     .container
         .content
@@ -21,11 +22,12 @@ main
             h3 Услуги медцентра для детей в возрасте от 3 лет
 
             p Мы предлагаем герметизацию (запечатывание) фиссур для защиты жевательных зубов от появления кариеса. Поверхность жевательных зубов покрыта бороздами или фиссурами, которые трудно вычищаются и потому в большей мере подвержены воздействию кариесогенных бактерий. Мы предлагаем герметизировать фиссуры, тем самым защитив еще формирующуюся эмаль от налета и бактерий. Проводить стоматологическую процедуру нужно в первые три года после прорезывания зубов – молочных, постоянных.
-    .container.consultation
-        .consultation_flex_container
-            i.phone_icon
-            .c_text.h2 Нужна консультация ?
-            button.btn__default.orange Получить консультацию
+    .container
+        .consultation
+            .consultation_flex_container
+                i.phone_icon
+                .c_text.h2 Нужна консультация?
+                button.btn__default.orange Получить консультацию
 
     section.services_section_slider.bg_grey
         .container
@@ -53,19 +55,74 @@ main
     section.bg_grey
         .container
             p.section_title.text-center Цены
-        .container.prices
-            .price_block
-                -for(var pg=1;pg<=2;pg++)
-                    .price_group
-                        p.price_group_title Детский прием
-                        .price_list
-                            -for(var tr=1;tr<=4;tr++)
-                                a.price_row(href="#")
-                                    .price_name
-                                        .price_item
-                                            span Лечение кариеса молочного зуба
-                                    .price_value
-                                        span от <strong> 40</strong> руб.
+        .container
+            .prices
+                .price_block
+                    -for(var pg=1;pg<=2;pg++)
+                        .price_group
+                            p.price_group_title Детский прием
+                            .price_list
+                                -for(var tr=1;tr<=4;tr++)
+                                    a.price_row(href="#")
+                                        .price_name
+                                            .price_item
+                                                span Лечение кариеса молочного зуба
+                                        .price_value
+                                            span от <strong> 40</strong> руб.
+
+    section
+        .container
+            p.section_title.text-center Фото До и После
+            .row.slick_slider.slider_before-after
+                -for(var ba=1;ba<=7;ba++)
+                    .col-12.col-sm-6.col-md-4.col-xl-3
+                        article.type_before-after
+                            a(href="#")
+                                .before(style="background-image:url(img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg)")
+                                    span До
+                                .after(style="background-image:url(img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg)")
+                                    span После
+                                .item_title Установка имплантов Medical NDI “Прайм”
+                                span.more Подробнее
+
+    section.reviews(style="background-image:url(img/r_img.jpg)")
+        .container
+            p.section_title.text-center Отзывы
+            .row.reviews_list
+                -for(var r=1;r<=4;r++)
+                    .col-12.col-sm-12.col-md-6.col-xl-3
+                        article.type_review
+                            .r_head Ольга
+                            .r_body Первый раз обратилась в эту клинику к стоматологу и осталась ну очень довольна.Лечащий врач Анастасия Леонидовна мастер своего дела, делает все четко, качественно и без боли.Очень комфортная атмосфера в клинике. Лечащий врач Анаста...
+                                .more Первый раз обратилась в эту клинику к стоматологу и осталась ну очень довольна.Лечащий врач Анастасия Леонидовна мастер своего дела, делает все четко, качественно и без боли.Очень комфортная атмосфера в клинике. Лечащий врач Анаста
+                                button.show_more Читать далее
+
+            .btn_group
+                a.btn__default.orange(href="#") Оставить отзыв
+
+
+    -var services =['','Терапевтическая стоматология', 'Детская стоматология', 'Эстетическая стоматология', 'Офисное отбеливание зубов','Установка зубного украшения', 'Протезирование зубов', 'Неврология', 'Мануальная терапия'];
+    section.services.bg_grey
+        .container
+            p.section_title.text-center Услуги
+            .row.services_list
+                -for(var i=1;i<=8;i++)
+                    .col-12.col-sm-6.col-md-4.col-xl-3
+                        article.type_service
+                            a(href="#")
+                                .row
+                                    .col-4.col-sm-12.col-md-12.col-xl-12.icon
+                                        img(src="img/icon-" + i + ".svg")
+                                    div.text.col-8.col-sm-12.col-md-12.col-xl-12=services[i]
+
+    section
+        .container
+            .content.p-0
+                p.section_title.text-left О наших услугах
+                p Медицинский центр "МИЛАмед" предлагает услуги платной стоматологии в Минске. Одни из самых популярных наших услуг - лечение кариеса, реставрация, рофессиональная чистка и отбеливание зубов.
+
+                p В медицинском центре ООО"МИЛАмед" используется новейшее оборудование, технологии и материалы мирового уровня. При лечении у нас Вы можете быть уверены, что услуги и квалификация врачей соответствует международным стандартам, а санитарный режим позволяет на 100% обеспечить полную стерильность при лечении и безопасность.
+
 
 
 

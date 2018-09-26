@@ -117,6 +117,44 @@ $(document).ready(function(){
 
 
 
+    if($('.slider_before-after > div').length >4){
+        $('.slider_before-after').slick({
+            dots: true,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }else if($(window).innerWidth() < 575 && $('.slider_before-after > div').length > 1){
+        $('.slider_before-after').slick({
+            dots: true,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+    }
+
+
+
 
 /*
     $('.mobile_btn').click(function () {
