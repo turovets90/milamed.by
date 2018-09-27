@@ -1,15 +1,11 @@
 $(document).ready(function(){
 
-
-
     $('.mobile_btn').click(function () {
         $(this).toggleClass('active');
         $('.main_menu').toggleClass('open');
         $('body').toggleClass('m_menu_active');
         return false;
     });
-
-
 
     if($('.main_slider > div').length > 2){
         $('.main_slider').slick({
@@ -20,7 +16,6 @@ $(document).ready(function(){
             slidesToScroll: 1,
         });
     }
-
 
 
     if($('.specialists_slider > div').length > 3){
@@ -54,8 +49,6 @@ $(document).ready(function(){
     }
 
 
-
-
     $('.type_review').each(function(){
         var show_more=$(this).find('.show_more');
         var more=$(this).find('.more');
@@ -81,12 +74,6 @@ $(document).ready(function(){
     }
 
 
-
-
-
-
-
-
     if($('.serv_slider > div').length > 2){
         $('.serv_slider').slick({
             dots: true,
@@ -110,7 +97,6 @@ $(document).ready(function(){
             slidesToScroll: 1,
         });
     }
-
 
 
     if($('.slider_before-after > div').length >4){
