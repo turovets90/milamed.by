@@ -319,7 +319,7 @@ body{
     font-size: 14px;
   }
 }
-@green_default:#308589;
+@green_default: rgba(48, 133, 137, 1);
 .container{
   max-width: 1230px;
 }
@@ -2500,6 +2500,9 @@ position: relative;
     font: 14px @Montserrat-bold;
     display: block;
     margin-top: 20px;
+    &:hover, &:focus{
+      color: rgba(48, 133, 137, 0.80);
+    }
   }
 
 }
