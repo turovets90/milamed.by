@@ -8,7 +8,7 @@ main
                         -for(var i=1;i<=3;i++)
                             .item(style="background-image:url(img/fdhgfdhdfgf.jpg)")
                     .text-center.btn__default_block
-                        button.btn__default.orange(data-toggle="modal" data-target="#modal_default") Получить консультацию
+                        button.btn__default.orange(data-toggle="modal" data-target="#get_consultation") Получить консультацию
 
         .container
             .main_slider_desc
@@ -21,7 +21,7 @@ main
                                 input.form-control(type="text" placeholder="Ваше имя")
                         .col-12.field
                             span.phone
-                                input.form-control(type="text" placeholder="+375 __ ___ __ __")
+                                input.form-control.phone_field(type="text" placeholder="+375 (__) ___-__-__")
                         .col-12.field
                             span.message
                                 textarea.form-control(type="text" placeholder="Ваше сообщение")

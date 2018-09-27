@@ -5,7 +5,7 @@
 header
     .container
         .row
-            .col-4.col-sm-4.col-md-2.col-xl-2
+            .col-4.col-sm-4.col-md-2.col-xl-2.logo_fix
                 .logo
                     a.logo__link(href="#")
                         img(src="img/logo.svg")
@@ -44,7 +44,7 @@ header
                                         a(href="tel:+375 (17) 258 39 39") <strong>+375 (17) 258 39 39</strong>
 
                     .header__col.d-none.d-xl-block
-                        button.btn__default.order_call(data-toggle="modal" data-target="#modal_default") Заказать звонок
+                        button.btn__default.order_call(data-toggle="modal" data-target="#order_call") Заказать звонок
 
                 .row
                     .col-12
@@ -58,10 +58,10 @@ header
 
 
                 .main_menu
-                    button.btn__default.order_call(data-toggle="modal" data-target="#modal_default") Заказать звонок
+                    button.btn__default.order_call(data-toggle="modal" data-target="#order_call") Заказать звонок
                     ul.nav
                         for menu_item,index in main_menu
-                            if index == 0
+                            if page.title == menu_item
                                 li.active
                                     a(href="" + menu_item + '.html')=menu_item
                             else

@@ -75,7 +75,7 @@ section.copyright
 
 
 
-.modal.fade#modal_default(role="dialog" aria-labelledby="modalLabel" aria-hidden="true")
+.modal.fade#get_consultation(role="dialog" aria-labelledby="modalLabel" aria-hidden="true")
     .modal-dialog
         .modal-content
             button.close(data-dismiss="modal" aria-label="Close")
@@ -88,7 +88,7 @@ section.copyright
                                 input.form-control(type="text" placeholder="Ваше имя")
                         .col-12.col-sm-12.col-md-6.field
                             span.phone
-                                input.form-control(type="text" placeholder="+375 __ ___ __ __")
+                                input.form-control.phone_field(type="text" placeholder="+375 (__) ___-__-__")
                         .col-12.field.message_field
                             span.message
                                 textarea.form-control(type="text" placeholder="Ваше сообщение")
@@ -97,5 +97,32 @@ section.copyright
                         .col-12.col-sm-12.col-md-6.field.text-center.text-md-right
                             button.btn__default.orange(type="submit") Отправить
 
-//a.scrolltop(href="#body")
+
+
+.modal.fade#order_call(role="dialog" aria-labelledby="modalLabel" aria-hidden="true")
+    .modal-dialog
+        .modal-content
+            button.close(data-dismiss="modal" aria-label="Close")
+            .modal-body
+                p.title Заказать звонок
+                form.main_form
+                    .row
+                        .col-12.col-sm-12.col-md-6.field
+                            span.name
+                                input.form-control(type="text" placeholder="Ваше имя")
+                        .col-12.col-sm-12.col-md-6.field
+                            span.phone
+                                input.form-control.phone_field(type="text" placeholder="+375 (__) ___-__-__")
+                        .col-12.field
+                            span.email
+                                input.form-control(type="text" placeholder="Ваш email")
+                        .col-12.field.message_field
+                            span.message
+                                textarea.form-control(type="text" placeholder="Ваше сообщение")
+                        .col-12.col-sm-12.col-md-6.field
+                            p здесь будет каптча
+                        .col-12.col-sm-12.col-md-6.field.text-center.text-md-right
+                            button.btn__default.orange(type="submit") Отправить
+
+a.scrolltop(href="#body")
 

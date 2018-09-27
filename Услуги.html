@@ -14,7 +14,7 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-4 col-sm-4 col-md-2 col-xl-2">
+          <div class="col-4 col-sm-4 col-md-2 col-xl-2 logo_fix">
             <div class="logo"><a class="logo__link" href="#"><img src="img/logo.svg"/></a></div>
           </div>
           <div class="col-8 col-sm-8 col-md-10 col-xl-10">
@@ -55,7 +55,7 @@
                 </div>
               </div>
               <div class="header__col d-none d-xl-block">
-                <button class="btn__default order_call" data-toggle="modal" data-target="#modal_default">Заказать звонок</button>
+                <button class="btn__default order_call" data-toggle="modal" data-target="#order_call">Заказать звонок</button>
               </div>
             </div>
             <div class="row">
@@ -66,10 +66,10 @@
               </div>
             </div>
             <div class="main_menu">
-              <button class="btn__default order_call" data-toggle="modal" data-target="#modal_default">Заказать звонок</button>
+              <button class="btn__default order_call" data-toggle="modal" data-target="#order_call">Заказать звонок</button>
               <ul class="nav">
-                <li class="active"><a href="Главная.html">Главная</a></li>
-                <li><a href="Услуги.html">Услуги</a></li>
+                <li><a href="Главная.html">Главная</a></li>
+                <li class="active"><a href="Услуги.html">Услуги</a></li>
                 <li><a href="Цены.html">Цены</a></li>
                 <li><a href="Акции.html">Акции</a></li>
                 <li><a href="О компании.html">О компании</a></li>
@@ -165,6 +165,9 @@
         </div>
       </section>
     </main>
+    <div id="map">
+      <script type="text/javascript" charset="utf-8" async="async" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1e7ef97cc9ba76104dbb3e98bed2cd13b22221de6d79f7ffb21d20b921d34f1d&amp;amp;width=100%&amp;amp;height=470&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>
+    </div>
     <footer>
       <div class="container">
         <div class="row">
@@ -249,7 +252,7 @@
         </div>
       </div>
     </section>
-    <div class="modal fade" id="modal_default" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal fade" id="get_consultation" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <button class="close" data-dismiss="modal" aria-label="Close"></button>
@@ -260,7 +263,7 @@
                 <div class="col-12 col-sm-12 col-md-6 field"><span class="name">
                     <input class="form-control" type="text" placeholder="Ваше имя"/></span></div>
                 <div class="col-12 col-sm-12 col-md-6 field"><span class="phone">
-                    <input class="form-control" type="text" placeholder="+375 __ ___ __ __"/></span></div>
+                    <input class="form-control phone_field" type="text" placeholder="+375 (__) ___-__-__"/></span></div>
                 <div class="col-12 field message_field"><span class="message">
                     <textarea class="form-control" type="text" placeholder="Ваше сообщение"></textarea></span></div>
                 <div class="col-12 col-sm-12 col-md-6 field">
@@ -275,13 +278,40 @@
         </div>
       </div>
     </div>
-    <!--a.scrolltop(href="#body")-->
+    <div class="modal fade" id="order_call" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close" data-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-body">
+            <p class="title">Заказать звонок</p>
+            <form class="main_form">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 field"><span class="name">
+                    <input class="form-control" type="text" placeholder="Ваше имя"/></span></div>
+                <div class="col-12 col-sm-12 col-md-6 field"><span class="phone">
+                    <input class="form-control phone_field" type="text" placeholder="+375 (__) ___-__-__"/></span></div>
+                <div class="col-12 field"><span class="email">
+                    <input class="form-control" type="text" placeholder="Ваш email"/></span></div>
+                <div class="col-12 field message_field"><span class="message">
+                    <textarea class="form-control" type="text" placeholder="Ваше сообщение"></textarea></span></div>
+                <div class="col-12 col-sm-12 col-md-6 field">
+                  <p>здесь будет каптча</p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 field text-center text-md-right">
+                  <button class="btn__default orange" type="submit">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div><a class="scrolltop" href="#body"></a>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/phone-mask.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>

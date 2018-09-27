@@ -3,6 +3,7 @@ html
     head
         - var page = { title: 'Контакты' }
         include inc/head.pug
+
     body#body
         include inc/header.pug
         main.page
@@ -16,7 +17,21 @@ html
                     h1 #{page.title}
             section
                 .container
-
+                    .row
+                        .col-12.col-sm-12.col-md-5.col-xl-4
+                            ul.contacts_list
+                                li.location <strong>г. Минск,<br> ул. Богдановича, 118</strong><br> (ТД "Некрасовский")
+                                li.time_work
+                                    span <b>пн-пт:</b> 9.00-20.00
+                                    span <b>сб:</b> 9.00-15.00
+                                    span <b>вс:</b> выходной
+                                li.phone
+                                    a(href="tel:+375 (29) 683 27 31") <strong>+375 (29) 683 27 31</strong>
+                                    a(href="tel:+375 (33) 327 27 31") <strong>+375 (33) 327 27 31</strong>
+                                li.tel
+                                    a(href="tel:+375 (17) 258 39 39") <strong>+375 (17) 258 39 39</strong>
+                        .col-12.col-sm-12.col-md-7.col-xl-8
+                            include inc/map.pug
 
         include inc/footer.pug
         include inc/scripts.pug
