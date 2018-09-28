@@ -8,7 +8,7 @@ main.page
                     a(href="#content") #{page.title}
             h1 #{page.title}
 
-    section.reviews(style="background-image:url(img/r_img.jpg)")
+    section.reviews.no_bg
         .container
             .row.reviews_list
                 -for(var r=1;r<=12;r++)
@@ -20,4 +20,4 @@ main.page
                                 button.show_more Читать далее
 
             .btn_group
-                a.btn__default.orange(href="#") Оставить отзыв
+                a.btn__default.orange(href="#add_review" data-toggle="modal") Оставить отзыв

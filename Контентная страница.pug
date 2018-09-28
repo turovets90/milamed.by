@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 html
     head
-        - var page = { title: 'О компании' }
+        - var page = { title: 'Контентная страница' }
         include inc/head.pug
     body#body
         include inc/header.pug
@@ -22,6 +22,32 @@ html
 
                     p Curabitur condimentum massa sodales purus ornare, sed venenatis tortor ornare. Integer accumsan commodo egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin ac nunc nunc. Aenean eget risus eu sem rutrum vehicula sed non lorem. Vestibulum rhoncus sagittis tempus. Fusce gravida, eros sit amet congue bibendum, mi mauris tristique leo, in tincidunt augue sapien ut sem. Morbi mi nisl, hendrerit non eros vel, fermentum fermentum nibh. Fusce sed nunc non massa consectetur tristique. Donec vulputate mattis nisi ut facilisis.
 
+
+            -var pr=['','Преимущества','Оборудование', 'Атмосфера', 'Отличные цены'];
+            -var pr_desc=['','Наша команда состоит только из высококвалифицированных врачей.','Наша клиника укомплектована только самым современным оборудованием.', 'Каждый день мы создаем комфортную атмосферу для каждого клиента.', 'Ценовая политика, которая понравится каждому клиенту. Скидки и акции круглый год.'];
+            section.preimuschestva
+                .container
+                    p.section_title.text-center Преимущества
+                    .row.preimuschestva_row
+                        -for(var p=1;p<=4;p++)
+                            .col-12.col-sm-6.col-md-6.col-xl-3
+                                article.type_preimuschestva
+                                    .row
+                                        .col-3.col-sm-12.pr-0
+                                            .icon
+                                                img(src="img/p_" + p + ".svg")
+                                        .col-9.col-sm-12
+                                            .p_title=pr[p]
+                                            .desc=pr_desc[p]
+            section.sertificates.bg_grey
+                .container
+                    p.section_title.text-center Лицензии и сертификаты
+                    .row.sertificates_list
+                        -for(var s=1;s<=4;s++)
+                            .col-12.col-sm-6.col-md-3.col-xl-3.text-center
+                                .item
+                                    a(href="img/ss_img.jpg" data-fancybox="sertificates")
+                                        img(src="img/ss_img.jpg")
         include inc/map.pug
         include inc/footer.pug
         include inc/scripts.pug

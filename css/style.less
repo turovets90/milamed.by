@@ -473,6 +473,7 @@ header{
       background: #308589;
       min-width: 320px;
       padding: 5px 15px; border:0;    margin-top: 10px;
+      z-index: 9999;
     }
     @media (max-width:375px){
       left: 5px !important;
@@ -642,7 +643,7 @@ header{
   }
 
   &:hover, &:focus{
-    text-decoration: none;color: rgba(48, 133, 137, 0.80);
+    text-decoration: none;color: #0BA61B;
   }
 
 
@@ -658,7 +659,7 @@ header{
     text-align: center;
     cursor: pointer;
     &:hover, &:focus{
-      background: rgba(241, 163, 81, 0.8);
+      background: #f18317;
     }
     @media (min-width:1200px){
       min-width: 180px;
@@ -668,7 +669,7 @@ header{
     color: #fff !important;
     background: #F1A351; border:0;
     &:hover, &:focus{
-      background: rgba(241, 163, 81, 0.8);
+      background: #f18317;
     }
   }
 }
@@ -899,6 +900,9 @@ header .main_menu{
   }
   &:hover{
     .box-shadow(0 2px 25px rgba(0, 0, 0, 0.25));
+    .text{
+      color: rgba(48, 133, 137, 0.8);
+    }
   }
   a{
     display: block;
@@ -1220,7 +1224,11 @@ main{
   .border-radius(5px);
   background: #fff;
   padding: 20px 20px 35px;
-  .box-shadow(1px 1px 4px rgba(0, 0, 0, 0.12));
+  .box-shadow(0 2px 10px rgba(0,0,0,0.15));
+
+  &:hover{
+    .box-shadow(0 2px 25px rgba(0,0,0,0.25));
+  }
 
   .r_head{
     position: relative;
@@ -1695,8 +1703,14 @@ footer{
   position: relative;
   height: 670px;
   background: #fff;
+  @media (max-width:1350px){
+    height: 600px;
+  }
+  @media (max-width:1200px){
+    height: 580px;
+  }
   @media (max-width:991px){
-    height: 360px;
+    height: 350px;
     margin-bottom: 20px;
   }
 
@@ -1789,8 +1803,14 @@ z-index: 99;
     height: 670px;
     position: relative;
     overflow: hidden;
+    @media (max-width:1350px){
+      height: 600px;
+    }
+    @media (max-width:1200px){
+      height: 580px;
+    }
     @media (max-width:991px){
-      height: 360px;
+      height: 350px;
     }
     &:before{
       content: '';
@@ -1854,8 +1874,14 @@ z-index: 99;
       background-size: cover;
       background-position: center;
       position: relative;
+      @media (max-width:1350px){
+        height: 600px;
+      }
+      @media (max-width:1200px){
+        height: 580px;
+      }
       @media (max-width:991px){
-        height: 360px;
+        height: 350px;
       }
       &:before{
         .b_a();
@@ -2499,7 +2525,11 @@ position: relative;
     line-height: 20px;
     font: 14px @Montserrat-bold;
     display: block;
+    background: none;
+    border:0;
+    padding-left: 0;
     margin-top: 20px;
+    cursor: pointer;
     &:hover, &:focus{
       color: rgba(48, 133, 137, 0.80);
     }
@@ -2689,5 +2719,15 @@ header{
     height: 40px;
     right:20px;
     bottom: 20px;
+  }
+}
+
+
+
+.page{
+  .reviews.no_bg{
+    &:before{
+      background: none;
+    }
   }
 }

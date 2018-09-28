@@ -77,13 +77,14 @@ main.page
                 -for(var ba=1;ba<=7;ba++)
                     .col-12.col-sm-6.col-md-4.col-xl-3
                         article.type_before-after
-                            a(href="#")
-                                .before(style="background-image:url(img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg)")
-                                    span До
-                                .after(style="background-image:url(img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg)")
-                                    span После
+                                a(href="img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg" data-fancybox="before_after-"+ba+"")
+                                    .before(style="background-image:url(img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg)")
+                                        span До
+                                a(href="img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg" data-fancybox="before_after-"+ba+"")
+                                    .after(style="background-image:url(img/31c1bd7df12e764248fbb6e43c3dcc2a.jpg)")
+                                        span После
                                 .item_title Установка имплантов Medical NDI “Прайм”
-                                span.more Подробнее
+                                button.more(data-toggle="modal" data-target="#before_after") Подробнее
 
     section.reviews(style="background-image:url(img/r_img.jpg)")
         .container
