@@ -167,6 +167,16 @@ $(document).ready(function(){
     });
 
 
+
+    if($(window).innerWidth() < 991){
+        $('.has_dropdown').on('click', function (e) {
+            e.preventDefault();
+            $(this).next().slideToggle();
+        });
+    }
+
+
+
 });
 
 
